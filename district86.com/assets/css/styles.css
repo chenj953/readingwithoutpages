@@ -1,3 +1,27 @@
+@font-face {
+  font-family: 'ptah';
+  src: url('../fonts/ptah-regular-webfont.woff2') format('woff2'),
+       url('../fonts/ptah-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'ptah';
+  src: url('../fonts/ptah-italic-webfont.woff2') format('woff2'),
+       url('../fonts/ptah-italic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'body';
+  src: url('../fonts/bagnardsans-webfont.woff2') format('woff2'),
+       url('../fonts/bagnardsans-webfont.woff') format('woff');
+}
+
+
 div { vertical-align: top; }
 
 html {
@@ -7,17 +31,14 @@ html {
   box-sizing: inherit;
 }
 
-@font-face{
-  font-family: 'woff_regular';
-  src: url("WorkSans-Regular.woff2");
-}
-
 
 body{
   background: rgb(33, 32, 32);
   padding: 0;
   margin: 0;
-  font-family: 'woff_regular';
+  /* font-family: 'Work Sans', sans-serif; */
+  font-family: 'ptah', sans-serif;
+  font-weight: 400;
   margin: 20px;
   /* overflow: hidden; */
 }
@@ -63,7 +84,6 @@ a:link .underline{
   top: 0;
   right: 40px;
   color:whitesmoke;
-  font-family: sans-serif;
   text-shadow: 0px 0px 10px rgb(251, 251, 251),
   0px 0px 20px rgb(251, 251, 251),
   0px 0px 30px rgb(251, 251, 251),
@@ -117,8 +137,10 @@ a:link .underline{
   top: 122px;
   color:whitesmoke;
   display: inline-block;
-  font-size: 60px;
+  font-size: 80px;
   font-weight: lighter;
+  font-family: 'ptah', sans-serif;
+  line-height: 80px;
 }
 
 
@@ -131,9 +153,10 @@ a:link .underline{
   font-size: 30px;
   line-height: 40px;
   kerning: 12pt;
-  font-family: 'woff_regular';
   display: none; 
   overflow: hidden;
+  font-family: 'body', sans-serif;
+  /* letter-spacing: 0.5px; */
 }
 
 .Issuelist {
@@ -143,20 +166,18 @@ a:link .underline{
 
 .Issue {
   padding: 0 30px 100px 20px;
-  margin: 0 90px 0 0;
+  margin: 0 80px 0 0;
   width: 100%;
   color:whitesmoke;
-  font-size: 20px;
   line-height: 40px;
-  font-family: 'woff_regular';
   text-align: center;
   transform: translate(0,75%);
 }
 
 .IssueTitle{
   width: 30%;
-  font-family: 'woff_regular';
-  font-size: 18px;
+  font-size: 20px;
+  font-family: 'ptah', sans-serif;
   padding: 0;
   margin: 0;
   display: inline-block;
