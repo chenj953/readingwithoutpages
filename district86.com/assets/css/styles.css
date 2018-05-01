@@ -1,0 +1,271 @@
+div { vertical-align: top; }
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+@font-face{
+  font-family: 'woff_regular';
+  src: url("WorkSans-Regular.woff2");
+}
+
+
+body{
+  background: rgb(33, 32, 32);
+  padding: 0;
+  margin: 0;
+  font-family: 'woff_regular';
+  margin: 20px;
+  /* overflow: hidden; */
+}
+
+
+body.bg1 { 
+  background: url('../img/smoke1.gif') no-repeat; 
+  background-size: cover;
+        }
+body.bg2 {
+  background: url('../img/henry1.jpg') no-repeat; 
+  background-size: cover;
+ }
+body.bg3 {
+  background: url('../img/chong1.jpg') no-repeat; 
+  background-size: cover;
+ }
+
+/* body.bg1 { background: #ff0; } */
+/* background: url('../img/imgname.jpg'); */
+
+a:link{
+  text-decoration: none;
+  color:whitesmoke;
+}
+
+a:visited {
+  color:whitesmoke;
+}
+
+a:active {
+  color:whitesmoke;
+}
+
+a:link .underline{
+  border-bottom: 1px solid white;
+}
+
+.close {
+  font-size: 100px;
+  line-height: 1;
+  position: fixed;
+  top: 0;
+  right: 40px;
+  color:whitesmoke;
+  font-family: sans-serif;
+  text-shadow: 0px 0px 10px rgb(251, 251, 251),
+  0px 0px 20px rgb(251, 251, 251),
+  0px 0px 30px rgb(251, 251, 251),
+  0px 0px 40px rgb(251, 251, 251),
+  0px 0px 50px rgb(251, 251, 251),
+  0px 0px 60px rgb(251, 251, 251),
+}
+
+.top-nav{
+  width: 100%;
+  height: 310px;
+}
+
+/* .logo1 img{
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  margin-left: 20px;
+  margin-top: 0;
+} */
+
+.logotype{
+  top: 110px;
+  margin: 0 auto;
+  color:whitesmoke;
+  font-size: 124px;
+  text-align: center;
+}
+
+.menu{
+  top: 260px;
+  margin: 0 auto;
+  color:whitesmoke;
+  font-size: 20px;
+  text-align: center;
+}
+
+.artchina{
+  position: relative;
+  width: 100%;
+  color: white;
+  font-size: 36px;
+  text-align: center;
+  padding-top: 30px;
+  transform: translate(0,88%);
+}
+
+.project_title{
+  position: absolute;
+  left: 40px;
+  top: 122px;
+  color:whitesmoke;
+  display: inline-block;
+  font-size: 60px;
+  font-weight: lighter;
+}
+
+
+.intro{
+  position: relative;
+  width: 80%;
+  top: -40px;
+  padding: 0 20px 100px 20px;
+  color:whitesmoke;
+  font-size: 30px;
+  line-height: 40px;
+  kerning: 12pt;
+  font-family: 'woff_regular';
+  display: none; 
+  overflow: hidden;
+}
+
+.Issuelist {
+  width: 100%;
+  text-align: center;
+}
+
+.Issue {
+  padding: 0 30px 100px 20px;
+  margin: 0 90px 0 0;
+  width: 100%;
+  color:whitesmoke;
+  font-size: 20px;
+  line-height: 40px;
+  font-family: 'woff_regular';
+  text-align: center;
+  transform: translate(0,75%);
+}
+
+.IssueTitle{
+  width: 30%;
+  font-family: 'woff_regular';
+  font-size: 18px;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+}
+
+
+.smoke_img {
+  padding: 0;
+  width: 100%;
+  height: auto;
+  display: none;
+}
+
+#project_img {
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+
+.print_img{
+  padding: 0;
+  width: 100%;
+  height: auto;
+  display: none;
+  }
+
+@media only screen 
+  and (min-width: 868px) 
+  and (max-width: 1440px) {
+  .intro {
+  display: block;
+    }
+}
+
+@media only screen 
+  and (min-width: 0) 
+  and (max-width: 867px) {
+    .smoke_img {
+  display: block;
+    }
+
+    #project_img {
+      width: 100%;
+      height: auto;
+      padding-left: 10px;
+      padding-right: 15px;
+      padding-bottom: 15px;
+    }
+      
+}
+
+.print_title{
+  display: none;
+}
+
+.print_contact {
+  display: none;
+}
+
+.print_img {
+  display: none;
+}
+
+@media print {
+  .print_title{
+    display: block;
+    color: black;
+    padding: 0;
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: bolder;
+  }
+  
+  .print_contact {
+    display: block;
+    font-size: 13pt;
+    padding-bottom: 20px;
+  }
+
+
+  .print_img {
+    display: block;
+    page-break-after: avoid;
+    page-break-inside: avoid;
+    padding-bottom: 30px;
+}
+
+#Zhou { 
+  width: 100%;
+  height: auto;
+  padding-bottom: 30px;
+}
+
+#QR { 
+  width: 40%;
+  height: auto;
+}
+
+  .project_title {display:none;}
+  .intro {display:none;}
+  .close {display:none;}
+  .contact {
+    width:100%;
+    color: #000;    
+    background-color: #fff;
+    page-break-after: avoid;
+    page-break-inside: avoid;
+}
+  @page {
+    margin: 2cm;
+}
+
+  }
