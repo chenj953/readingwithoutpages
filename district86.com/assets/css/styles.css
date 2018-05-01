@@ -260,9 +260,9 @@ and (orientation : landscape){
   display: none;
 }
 
-.print_img2 {
+/* .print_img2 {
   display: none;
-}
+} */
 
 @media print {
   .print_title{
@@ -310,13 +310,13 @@ and (orientation : landscape){
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.print_img2 {
+/* .print_img2 {
   display: block;
   page-break-after: avoid;
   page-break-inside: avoid;
   padding-bottom: 20px;
   transform: translate(0,-96%);
-}
+} */
 
 
 
