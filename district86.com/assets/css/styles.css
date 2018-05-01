@@ -228,7 +228,27 @@ a:link .underline{
       
 }
 
+/* @media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) 
+and (orientation : landscape){
+  .smoke_img {
+    display: block;
+      }
+  
+      #project_img {
+        width: 100%;
+        height: auto;
+        padding-left: 10px;
+        padding-right: 15px;
+        padding-bottom: 15px;
+} */
+
 .print_title{
+  display: none;
+}
+
+.print_title2{
   display: none;
 }
 
@@ -240,20 +260,38 @@ a:link .underline{
   display: none;
 }
 
+.print_img2 {
+  display: none;
+}
+
 @media print {
   .print_title{
     display: block;
     color: black;
     padding: 0;
-    margin-bottom: 15px;
+    margin-bottom: 13px;
     font-size: 18px;
     font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .print_title2{
+    display: block;
+    color: black;
+    padding: 0;
+    margin-bottom: 13px;
+    font-size: 18px;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
   }
   
+
+
   .print_contact {
     display: block;
     font-size: 13pt;
     padding-bottom: 20px;
+    font-family: Arial, Helvetica, sans-serif;
   }
 
 
@@ -261,18 +299,32 @@ a:link .underline{
     display: block;
     page-break-after: avoid;
     page-break-inside: avoid;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
 }
 
 #Zhou { 
   width: 100%;
   height: auto;
   padding-bottom: 30px;
+  font-weight: bolder;
+  font-family: Arial, Helvetica, sans-serif;
 }
+
+.print_img2 {
+  display: block;
+  page-break-after: avoid;
+  page-break-inside: avoid;
+  padding-bottom: 20px;
+  transform: translate(0,-96%);
+}
+
+
 
 #QR { 
   width: 40%;
   height: auto;
+  font-weight: bolder;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
   .project_title {display:none;}
