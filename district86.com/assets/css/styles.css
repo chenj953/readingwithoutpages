@@ -21,6 +21,22 @@
        url('../fonts/bagnardsans-webfont.woff') format('woff');
 }
 
+@font-face {
+  font-family: 'work_regular';
+  src: url('../fonts/WorkSans-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'work_light';
+  src: url('../fonts/WorkSans-Light.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Cormorant_Light';
+  src: url('../fonts/Cormorant-Light.woff2') format('woff2'),
+  url('../fonts/Cormorant-Light.woff') format('woff');
+}
+
 
 div { vertical-align: top; }
 
@@ -45,15 +61,15 @@ body{
 
 
 body.bg1 { 
-  background: url('../img/smoke1.gif') no-repeat; 
+  background: url('../img/smoke7.jpg') no-repeat; 
   background-size: cover;
         }
 body.bg2 {
-  background: url('../img/henry1.jpg') no-repeat; 
+  background: url('../img/henry8.jpg') no-repeat; 
   background-size: cover;
  }
 body.bg3 {
-  background: url('../img/chong1.jpg') no-repeat; 
+  background: url('../img/chong03.jpg') no-repeat; 
   background-size: cover;
  }
 
@@ -73,29 +89,41 @@ a:active {
   color:whitesmoke;
 }
 
-a:link .underline{
+.underline{
   border-bottom: 1px solid white;
 }
 
 .close {
-  font-size: 100px;
+  font-size: 80px;
   line-height: 1;
   position: fixed;
-  top: 0;
-  right: 40px;
+  top: 8px;
+  right: 30px;
   color:whitesmoke;
+  font-family: 'work_light',sans-serif;
+}
+
+.next {
+  font-size: 60px;
+  line-height: 1;
+  position: fixed;
+  top: 600px;
+  right: 33px;
+  color:whitesmoke;
+  font-family: 'work_light',sans-serif;
 }
 
 .resize {
+  font-family: 'work_regular',sans-serif;
   transform: rotate(-90deg);
-  font-size: 15px;
+  font-size: 13px;
   line-height: 1;
   position: fixed;
-  top: 320px;
+  top: 335px;
   right: -148px;
   color:rgb(33, 32, 32);
   animation: blinker 3s linear infinite;
-  animation-delay: 3s;
+  animation-delay: 2s;
 }
 
 @keyframes blinker {
@@ -146,7 +174,33 @@ a:link .underline{
   transform: translate(0,290%);
 }
 
+.number{
+  position: absolute;
+  left: 40px;
+  top: 40px;
+  color:whitesmoke;
+  display: inline-block;
+  font-size: 80px;
+  font-weight: lighter;
+  font-family: 'Cormorant_Light',sans-serif;
+  line-height: 80px;
+  display: none;
+}
+
+
 .project_title{
+  position: absolute;
+  left: 40px;
+  top: 122px;
+  color:whitesmoke;
+  display: inline-block;
+  font-size: 80px;
+  font-weight: lighter;
+  font-family: 'Cormorant_Light', sans-serif;
+  line-height: 80px;
+}
+
+.about_logo{
   position: absolute;
   left: 40px;
   top: 122px;
@@ -158,7 +212,6 @@ a:link .underline{
   line-height: 80px;
 }
 
-
 .intro{
   position: relative;
   width: 80%;
@@ -167,12 +220,35 @@ a:link .underline{
   color:whitesmoke;
   font-size: 30px;
   line-height: 40px;
-  kerning: 12pt;
   display: none; 
   overflow: hidden;
-  font-family: 'body', sans-serif;
+  font-family: 'work_light', sans-serif;
   /* letter-spacing: 0.5px; */
 }
+
+.credit{
+  margin-top: 80px;
+  margin-bottom: 0;
+  width: 100%;
+  height: auto;
+  color: grey;
+  /* text-align: center; */
+  font-size: 15px;
+  line-height: 11px;
+  letter-spacing: 0.6px;
+  font-family: 'work_regular',sans-serif;
+}
+
+#credit2{
+  padding: 0;
+  margin-top: 10px;
+  width: 100%;
+  font-family: 'Cormorant_Light',sans-serif;
+  font-size: 15px;
+  letter-spacing: 0.4px;
+  color:white;
+}
+
 
 .Issuelist {
   width: 100%;
@@ -193,7 +269,7 @@ a:link .underline{
   width: 30%;
   font-size: 20px;
   line-height: 24px;
-  font-family: 'ptah', sans-serif;
+  font-family: 'Cormorant_Light', sans-serif;
   padding: 0;
   margin: 0;
   display: inline-block;
@@ -225,6 +301,7 @@ a:link .underline{
   .intro {
   display: block;
     }
+
 }
 
 @media only screen 
@@ -233,6 +310,10 @@ a:link .underline{
     .smoke_img {
   display: block;
     }
+
+    .resize {
+      display: none;
+        }
 
     #project_img {
       width: 100%;
@@ -244,21 +325,24 @@ a:link .underline{
       
 }
 
-/* @media only screen 
-and (min-device-width : 375px) 
-and (max-device-width : 667px) 
-and (orientation : landscape){
-  .smoke_img {
-    display: block;
-      }
-  
-      #project_img {
-        width: 100%;
-        height: auto;
-        padding-left: 10px;
-        padding-right: 15px;
-        padding-bottom: 15px;
-} */
+@media only screen 
+  and (min-height: 0px) 
+  and (max-height: 270px) {
+  .number {
+  display: block;
+    }
+
+    .project_title {
+      display: none;
+    }
+
+    .resize{
+      display: none;
+    }
+
+
+}
+
 
 .print_title{
   display: none;
@@ -308,6 +392,7 @@ and (orientation : landscape){
     font-size: 13pt;
     padding-bottom: 20px;
     font-family: Arial, Helvetica, sans-serif;
+
   }
 
 
@@ -316,6 +401,7 @@ and (orientation : landscape){
     page-break-after: avoid;
     page-break-inside: avoid;
     padding-bottom: 20px;
+ 
 }
 
 #Zhou { 
@@ -325,15 +411,6 @@ and (orientation : landscape){
   font-weight: bolder;
   font-family: Arial, Helvetica, sans-serif;
 }
-
-/* .print_img2 {
-  display: block;
-  page-break-after: avoid;
-  page-break-inside: avoid;
-  padding-bottom: 20px;
-  transform: translate(0,-96%);
-} */
-
 
 
 #QR { 
@@ -346,6 +423,8 @@ and (orientation : landscape){
   .project_title {display:none;}
   .intro {display:none;}
   .close {display:none;}
+  .resize {display:none;}
+  .next {display:none;}
   .contact {
     width:100%;
     color: #000;    
